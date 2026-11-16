@@ -366,7 +366,7 @@ body {
 .navlogo img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 50%;
 
 }
@@ -2047,8 +2047,8 @@ footer hr {
 }
 
 /* Heading */
-.modal-info h2.modal-title {
-    font-size: 38px;
+.modal-title {
+    font-size: 30px;
     color: var(--light-purple);
     margin-bottom: 15px;
 }
@@ -5509,4 +5509,11 @@ footer hr {
 
 .baking-link:hover span {
     transform: translateX(5px);
+}
+
+.product-name{
+    font-family: "Cinzel",serif;
+    font-size: 17px;
+    font-weight: bolder;
+    color: var(--nav-bg);
 }
