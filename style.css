@@ -515,7 +515,8 @@ main{
     /* line-height: 1.1; */
 }
 
-.carousel-caption h1 {
+.carousel-caption h1,
+.carousel-caption h2.hero-title {
     font-size: 50px;
     font-weight: 700;
     color: var(--text-color--);
@@ -528,6 +529,13 @@ main{
     margin-bottom: 15px;
     color: var(--gold);
     text-shadow: 0 2px 3px black;
+}
+
+.carousel-caption h2.hero-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--text-color--);
+    margin-bottom: 5px;
 }
 
 .carousel-caption p {
@@ -916,7 +924,8 @@ footer hr {
         transform: translateY(-50%);
     }
 
-    .carousel-caption h1 {
+    .carousel-caption h1,
+    .carousel-caption h2.hero-title {
         font-size: 34px;
         line-height: 1.1;
     }
@@ -1161,7 +1170,8 @@ footer hr {
         transform: translateY(-50%);
     }
 
-    .carousel-caption h1 {
+    .carousel-caption h1,
+    .carousel-caption h2.hero-title {
         font-size: 23px;
         line-height: 1.1;
         margin-bottom: 4px;
@@ -1434,7 +1444,8 @@ footer hr {
         max-width: 70%;
     }
 
-    .carousel-caption h1 {
+    .carousel-caption h1,
+    .carousel-caption h2.hero-title {
         font-size: 20px;
     }
 
@@ -2036,7 +2047,7 @@ footer hr {
 }
 
 /* Heading */
-.modal-info h1 {
+.modal-info h2.modal-title {
     font-size: 38px;
     color: var(--light-purple);
     margin-bottom: 15px;
@@ -2047,6 +2058,12 @@ footer hr {
     color: var(--gold);
     font-size: 25px;
     margin-bottom: 25px;
+}
+
+.modal-info h2.modal-title {
+    font-size: 38px;
+    color: var(--light-purple);
+    margin-bottom: 15px;
 }
 
 /* Description */
@@ -2856,7 +2873,7 @@ footer hr {
     max-width: 100%;
 }
 
-.our-bakery h1 {
+.our-bakery h2 {
     color: var(--nav-bg);
     font-family: dancing script;
     font-size: 70px;
@@ -2906,7 +2923,7 @@ footer hr {
         overflow-y: auto;
     }
 
-    .cake-modal .modal-info h1 {
+    .cake-modal .modal-info h2.modal-title {
         font-size: 32px;
     }
 
@@ -2958,7 +2975,7 @@ footer hr {
         overflow-y: auto;
     }
 
-    .cake-modal .modal-info h1 {
+    .cake-modal .modal-info h2.modal-title {
         font-size: 26px;
     }
 
@@ -3016,7 +3033,7 @@ footer hr {
         padding: 22px;
     }
 
-    .cake-modal .modal-info h1 {
+    .cake-modal .modal-info h2.modal-title {
         font-size: 25px;
     }
 
@@ -3074,7 +3091,7 @@ footer hr {
         overflow: visible;
     }
 
-    .cake-modal .modal-info h1 {
+    .cake-modal .modal-info h2.modal-title {
         font-size: 22px;
         line-height: 1.35;
         padding-right: 25px;
@@ -3151,7 +3168,7 @@ footer hr {
         padding: 15px 12px;
     }
 
-    .cake-modal .modal-info h1 {
+    .cake-modal .modal-info h2.modal-title {
         font-size: 20px;
     }
 
@@ -4774,7 +4791,7 @@ footer hr {
 }
 
 /* Heading */
-.modal-info h1 {
+.modal-info h2.modal-title {
     font-size: 38px;
     color: var(--light-purple);
     margin-bottom: 15px;
@@ -4868,7 +4885,7 @@ footer hr {
         padding: 30px 25px 25px;
     }
 
-    .modal-info h1 {
+    .modal-info h2.modal-title {
         font-size: 27px;
         margin-bottom: 8px;
     }
@@ -4943,7 +4960,7 @@ footer hr {
         padding: 25px 18px 20px;
     }
 
-    .modal-info h1 {
+    .modal-info h2.modal-title {
         font-size: 23px;
         margin-bottom: 6px;
     }
