@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 | Bakerz Bite - Page Not Found</title>
+
+    <meta name="description" content="Oops! This page isn't on today's menu. Visit Bakerz Bite and explore our delicious bakery collection.">
+    <meta name="robots" content="noindex, follow">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #FFF8ED;
+            color: #120b18;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            background: #3B123C;
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #DEA347;
+            font-family: 'Dancing Script', cursive;
+            font-size: 38px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #d8a7ff;
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            color: #FFFFFF;
+            font-size: 13px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #DEA347;
+            letter-spacing: 1px;
+        }
+
+        /* Error Section */
+
+        .error-section {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 65px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-section::before {
+            content: "SWEET";
+            position: absolute;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(100px, 20vw, 240px);
+            font-weight: 800;
+            color: rgba(59, 18, 60, 0.035);
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 1;
+            max-width: 750px;
+            animation: fadeUp 1s ease both;
+        }
+
+        /* Cute Decorations */
+
+        .cute-decor {
+            position: absolute;
+            color: #DEA347;
+            font-size: 35px;
+            pointer-events: none;
+            animation: floatCute 3s ease-in-out infinite;
+        }
+
+        .decor-one {
+            top: 12%;
+            left: 5%;
+            color: #d8a7ff;
+            font-size: 45px;
+        }
+
+        .decor-two {
+            top: 25%;
+            right: 5%;
+            animation-delay: 0.7s;
+        }
+
+        .decor-three {
+            bottom: 15%;
+            left: 15%;
+            color: #d8a7ff;
+            animation-delay: 1.3s;
+        }
+
+        .decor-four {
+            bottom: 20%;
+            right: 12%;
+            color: #DEA347;
+            font-size: 28px;
+            animation-delay: 1.8s;
+        }
+
+        .decor-five {
+            top: 55%;
+            left: 2%;
+            color: #d8a7ff;
+            font-size: 24px;
+            animation-delay: 0.4s;
+        }
+
+        /* Typography */
+
+        .small-text {
+            color: #6f3fa8;
+            font-size: 12px;
+            letter-spacing: 5px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .error-number {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(120px, 23vw, 230px);
+            font-weight: 800;
+            line-height: 1;
+            color: #3B123C;
+            letter-spacing: -12px;
+            text-shadow: 5px 7px 0 rgba(222, 163, 71, 0.25);
+            animation: numberPop 1.2s ease both;
+            transition: color 0.4s ease, text-shadow 0.4s ease;
+            cursor: default;
+        }
+
+        .error-number:hover {
+            color: #6f3fa8;
+            text-shadow: 7px 9px 0 rgba(222, 163, 71, 0.3);
+        }
+
+        .error-title {
+            font-family: 'Dancing Script', cursive;
+            color: #6f3fa8;
+            font-size: clamp(45px, 7vw, 75px);
+            font-weight: 700;
+            margin-top: 5px;
+            animation: fadeUp 1.4s ease both;
+        }
+
+        .gold-line {
+            width: 100px;
+            height: 3px;
+            background: #DEA347;
+            margin: 20px auto;
+            animation: lineGrow 1.2s ease both;
+        }
+
+        .error-description {
+            color: #511d53;
+            font-size: 15px;
+            line-height: 2;
+            margin-bottom: 8px;
+        }
+
+        .error-subtitle {
+            color: #88798a;
+            font-size: 13px;
+            margin-bottom: 28px;
+        }
+
+        /* Home Button */
+
+        .home-button {
+            display: inline-block;
+            background: #3B123C;
+            color: #FFFFFF;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.35s ease;
+            box-shadow: 0 5px 15px rgba(59, 18, 60, 0.1);
+        }
+
+        .home-button:hover {
+            background: #DEA347;
+            color: #3B123C;
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 10px 25px rgba(59, 18, 60, 0.2);
+            letter-spacing: 1px;
+        }
+
+        .home-button span {
+            margin-right: 9px;
+        }
+
+        /* Footer */
+
+        .footer {
+            background: #3B123C;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .footer-logo {
+            color: #DEA347;
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            margin-bottom: 8px;
+            transition: 0.3s;
+        }
+
+        .footer-logo:hover {
+            color: #d8a7ff;
+        }
+
+        .footer p {
+            font-size: 12px;
+            color: #e6d8e6;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #FFFFFF;
+            font-size: 11px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #DEA347;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(222, 163, 71, 0.35);
+            padding-top: 17px;
+            margin-top: 15px;
+        }
+
+        /* Animations */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes numberPop {
+            0% {
+                opacity: 0;
+                transform: scale(0.65);
+            }
+
+            70% {
+                transform: scale(1.08);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes lineGrow {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100px;
+            }
+        }
+
+        @keyframes floatCute {
+            0%, 100% {
+                transform: translateY(0) rotate(-8deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(10deg);
+            }
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 14px 5%;
+            }
+
+            .logo {
+                font-size: 32px;
+            }
+
+            .error-section {
+                min-height: 72vh;
+                padding: 55px 18px;
+            }
+
+            .error-number {
+                font-size: 125px;
+                letter-spacing: -6px;
+            }
+
+            .error-title {
+                font-size: 48px;
+            }
+
+            .decor-one {
+                left: 2%;
+            }
+
+            .decor-two {
+                right: 2%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                gap: 10px;
+            }
+
+            .logo {
+                font-size: 28px;
+            }
+
+            .nav-link {
+                font-size: 11px;
+            }
+
+            .error-section {
+                min-height: 70vh;
+                padding: 50px 15px;
+            }
+
+            .error-number {
+                font-size: 95px;
+                letter-spacing: -5px;
+            }
+
+            .error-title {
+                font-size: 39px;
+            }
+
+            .small-text {
+                font-size: 10px;
+                letter-spacing: 3px;
+            }
+
+            .error-description {
+                font-size: 13px;
+            }
+
+            .error-subtitle {
+                font-size: 12px;
+            }
+
+            .home-button {
+                padding: 13px 24px;
+                font-size: 12px;
+            }
+
+            .footer-links {
+                gap: 13px;
+            }
+
+            .cute-decor {
+                font-size: 25px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Bakerz Bite
+        </a>
+
+        <a href="index.html" class="nav-link">
+            Back to Home →
+        </a>
+
+    </nav>
+
+    <main class="error-section">
+
+        <div class="error-content">
+
+            <div class="cute-decor decor-one">♡</div>
+            <div class="cute-decor decor-two">✦</div>
+            <div class="cute-decor decor-three">✧</div>
+            <div class="cute-decor decor-four">♡</div>
+            <div class="cute-decor decor-five">✿</div>
+
+            <div class="small-text">
+                OOPS! SOMETHING IS MISSING
+            </div>
+
+            <h1 class="error-number">
+                404
+            </h1>
+
+            <h2 class="error-title">
+                Page Not Found!
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p class="error-description">
+                Looks like this page isn't on today's menu!
+            </p>
+
+            <p class="error-subtitle">
+                But don't worry, there's always something sweet waiting for you.
+            </p>
+
+            <a href="index.html" class="home-button">
+                <span>←</span> TAKE ME HOME
+            </a>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            Bakerz Bite
+        </div>
+
+        <p>
+            Freshly baked happiness, always!
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="index.html#cake">Cakes</a>
+            <a href="index.html#savory">Savories</a>
+            <a href="index.html#offers">Offers</a>
+            <a href="About.html">About Us</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="copyright">
+            <p>
+                © 2026 Bakerz Bite. All Rights Reserved.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

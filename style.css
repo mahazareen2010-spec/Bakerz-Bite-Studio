@@ -5484,3 +5484,29 @@ footer hr {
     color: var(--nav-bg);
     transform: translateY(-5px);
 }
+
+
+/* link  */
+.baking-link {
+    font-family: 'dancing script', serif;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.baking-link span {
+    display: inline-block;
+    margin-left: 6px;
+    transition: 0.3s ease;
+}
+
+.baking-link:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+.baking-link:hover span {
+    transform: translateX(5px);
+}
