@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mahazareen2010-spec.github.io/Bakerz-Bite-Studio/sitemap.xml
